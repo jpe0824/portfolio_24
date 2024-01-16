@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Landing from "./pages/landing/Landing";
 
 function App() {
-
   return (
     <>
-      <div>Hello World!</div>
+      <Landing />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

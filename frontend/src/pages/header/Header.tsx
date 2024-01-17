@@ -14,10 +14,11 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
-// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [state, setState] = React.useState({ open: false });
+  const navigate = useNavigate();
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -46,12 +47,12 @@ function Header() {
               <ListItemButton
                 onClick={() => {
                   index === 0
-                    ? (window.location.href = "/about")
+                    ? navigate("/about")
                     : index === 1
-                    ? (window.location.href = "/skills")
+                    ? navigate("/skills")
                     : index === 2
-                    ? (window.location.href = "/portfolio")
-                    : (window.location.href = "/contact");
+                    ? navigate("/portfolio")
+                    : navigate("/contact");
                   setState({ open: false });
                 }}
               >
@@ -76,7 +77,7 @@ function Header() {
           <ListItem key="Resume" disablePadding>
             <ListItemButton
               onClick={() => {
-                window.location.href = "/resume";
+                navigate("/resume");
                 setState({ open: false });
               }}
             >

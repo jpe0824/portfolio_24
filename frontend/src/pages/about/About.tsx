@@ -5,7 +5,7 @@ function About() {
   return (
     <div>
       <UpArrowButton page="/" direction="up" />
-      <h1>About</h1>
+      <h1 className="title">About</h1>
       <DownArrowButton page="/skills" direction="down" />
     </div>
   );

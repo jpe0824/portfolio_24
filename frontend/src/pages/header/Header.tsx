@@ -14,6 +14,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
+// import { Link } from "react-router-dom";
 
 function Header() {
   const [state, setState] = React.useState({ open: false });
@@ -42,7 +43,18 @@ function Header() {
         <List>
           {["About", "Skills", "Portfolio", "Contact"].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              <ListItemButton
+                onClick={() => {
+                  index === 0
+                    ? (window.location.href = "/about")
+                    : index === 1
+                    ? (window.location.href = "/skills")
+                    : index === 2
+                    ? (window.location.href = "/portfolio")
+                    : (window.location.href = "/contact");
+                  setState({ open: false });
+                }}
+              >
                 <ListItemIcon>
                   {index === 0 ? (
                     <InfoIcon />
@@ -62,7 +74,12 @@ function Header() {
         <Divider />
         <List>
           <ListItem key="Resume" disablePadding>
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => {
+                window.location.href = "/resume";
+                setState({ open: false });
+              }}
+            >
               <ListItemIcon>
                 <FeedIcon />
               </ListItemIcon>

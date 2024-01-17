@@ -1,8 +1,8 @@
 import React from "react";
 import "./Landing.css";
 import { styled } from "@mui/system";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import IconButton from "@mui/material/IconButton";
+// import { Link } from "react-scroll";
+import { DownArrowButton } from "../../components/buttons/Buttons"
 
 const StyledName = styled("span")(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -11,6 +11,7 @@ const StyledName = styled("span")(({ theme }) => ({
 function Landing() {
   return (
     <div className="title-container">
+
       <h1 className="name">
         <div>
           Hi! I'm <StyledName>Jason</StyledName>,
@@ -27,22 +28,7 @@ function Landing() {
           <span className="flip">Dodgers Fan</span>
         </div>
       </h1>
-      <IconButton
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          ":hover": {
-            "& .MuiSvgIcon-root": {
-              color: "secondary.main", // Use the secondary color from the theme
-            },
-          },
-        }}
-        aria-label="scroll down"
-      >
-        <KeyboardArrowDownIcon sx={{ fontSize: 84 }} color="primary" />
-      </IconButton>
+      <DownArrowButton page="about" direction="down" />
     </div>
   );
 }

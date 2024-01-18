@@ -97,8 +97,8 @@ function Header() {
       <IconButton
         sx={{
           position: "absolute",
-          top: 0,
-          right: 0,
+          top: 10,
+          right: 10,
           ":hover": {
             "& .MuiSvgIcon-root": {
               color: "secondary.main", // Use the secondary color from the theme

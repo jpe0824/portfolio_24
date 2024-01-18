@@ -14,7 +14,7 @@ const UpArrowButton = ({ page }: Props) => {
     <IconButton
       sx={{
         position: "absolute",
-        top: 0,
+        top: "0vh",
         left: "50%",
         transform: "translateX(-50%)",
         ":hover": {
@@ -26,7 +26,7 @@ const UpArrowButton = ({ page }: Props) => {
       aria-label="scroll up"
     >
       <Link to={page}>
-        <KeyboardArrowUpIcon sx={{ fontSize: 84 }} color="primary" />
+        <KeyboardArrowUpIcon sx={{ fontSize: 72 }} color="primary" />
       </Link>
     </IconButton>
   );
@@ -37,7 +37,7 @@ const DownArrowButton = ({ page }: Props) => {
     <IconButton
       sx={{
         position: "absolute",
-        bottom: 0,
+        bottom: "0vh",
         left: "50%",
         transform: "translateX(-50%)",
         ":hover": {
@@ -49,7 +49,7 @@ const DownArrowButton = ({ page }: Props) => {
       aria-label="scroll down"
     >
       <Link to={page}>
-        <KeyboardArrowDownIcon sx={{ fontSize: 84 }} color="primary" />
+        <KeyboardArrowDownIcon sx={{ fontSize: 72 }} color="primary" />
       </Link>
     </IconButton>
   );

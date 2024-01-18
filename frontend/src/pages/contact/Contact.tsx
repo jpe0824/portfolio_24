@@ -3,12 +3,13 @@ import {
   DownArrowButton,
   UpArrowButton,
 } from "../../components/buttons/Buttons";
+import styles from "../../styles/styles";
 
 function Contact() {
   return (
     <div>
       <UpArrowButton page="/portfolio" direction="up" />
-      <h1 className="title">Contact</h1>
+      <h1 style={styles.title}>Contact</h1>
       <DownArrowButton page="/resume" direction="down" />
     </div>
   );

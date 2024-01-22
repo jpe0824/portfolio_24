@@ -22,6 +22,15 @@ const styles = {
     marginLeft: "5vw", // Use camelCase for CSS property names
     marginTop: "7vh",
   },
+  pageContainer: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "5vw", // Centers the Box itself
+    marginRight: "5vw", // Centers the Box itself
+    marginTop: "5vh", // Centers the Box itself
+    marginBottom: "5vh", // Centers the Box itself
+    width: "90%", // Adjust as needed
+  },
 };
 
 export default styles;

@@ -1,4 +1,3 @@
-import "./About.css";
 import {
   DownArrowButton,
   UpArrowButton,
@@ -24,17 +23,7 @@ function About() {
     >
       <UpArrowButton page="/" direction="up" />
       <h1 style={styles.title}>About</h1>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          marginLeft: "5vw", // Centers the Box itself
-          marginRight: "5vw", // Centers the Box itself
-          marginTop: "5vh", // Centers the Box itself
-          marginBottom: "5vh", // Centers the Box itself
-          width: "90%", // Adjust as needed
-        }}
-      >
+      <Box sx={styles.pageContainer}>
         <Grid container spacing={2}>
           {/* Top container */}
           <Grid

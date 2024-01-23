@@ -4,6 +4,7 @@ const styles = {
     flexDirection: "column" as const,
     justifyContent: "center" as const,
     paddingLeft: 25, // You can adjust the padding as needed
+    paddingRight: 25, // You can adjust the padding as needed
     textAlign: "left" as const, // Centers the text inside the Paper
     minHeight: "160px" as const,
   },
@@ -12,6 +13,7 @@ const styles = {
     flexDirection: "column" as const,
     justifyContent: "center" as const,
     paddingLeft: 25, // You can adjust the padding as needed
+    paddingRight: 25, // You can adjust the padding as needed
     textAlign: "left" as const, // Centers the text inside the Paper
     minHeight: "325px" as const,
     maxHeight: "325px" as const,
@@ -30,6 +32,15 @@ const styles = {
     marginTop: "5vh", // Centers the Box itself
     marginBottom: "5vh", // Centers the Box itself
     width: "auto", // Adjust as needed
+  },
+  iconContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 7,
+    width: "100%",
+    height: "100%",
   },
   bodyContainer: {
     flexGrow: 1,

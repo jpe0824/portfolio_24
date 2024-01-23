@@ -1,5 +1,5 @@
 import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
-import { Box, Grid, Paper } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import styles from "../../styles/styles";
 import { useState } from "react";
 
@@ -15,9 +15,11 @@ function About() {
   const titleStyle4 = isHovered4 ? { marginBottom: 0 } : {};
 
   return (
-    <div style={styles.bodyContainer}>
+    <Box style={styles.bodyContainer}>
       <UpArrowButton page="/" direction="up" />
-      <h1 style={styles.title}>About</h1>
+      <Typography variant="h2" style={styles.title}>
+        About
+      </Typography>
       <Box sx={styles.pageContainer}>
         <Grid container spacing={2}>
           {/* Top container */}
@@ -28,17 +30,17 @@ function About() {
             onMouseLeave={() => setIsHovered1(false)}
           >
             <Paper style={styles.paper}>
-              <h2 style={titleStyle1}>
+              <Typography variant="h4" style={titleStyle1}>
                 Creative Developer and Life-Long Learner
-              </h2>
+              </Typography>
               {isHovered1 && (
-                <p>
+                <Typography variant="body1">
                   I have always loved technology and creating things. When I was
                   younger it came in the form of building Legos, then video
                   games like Minecraft or some city builder. Now I enjoy the
                   creativity and challenges of building, maintaining, and
                   improving software.
-                </p>
+                </Typography>
               )}
             </Paper>
           </Grid>
@@ -52,10 +54,12 @@ function About() {
             onMouseLeave={() => setIsHovered2(false)}
           >
             <Paper style={styles.bottomPaper}>
-              <h2 style={titleStyle2}>As a Developer</h2>
+              <Typography variant="h4" style={titleStyle2}>
+                As a Developer
+              </Typography>
               {isHovered2 && (
                 <>
-                  <p>
+                  <Typography variant="body1">
                     I pride myself in putting the best code forward. I take time
                     to ensure my code is{" "}
                     <b>
@@ -67,11 +71,11 @@ function About() {
                     </b>
                     . I am always willing to take feedback and use that to
                     improve my skills.
-                  </p>
-                  <p>
+                  </Typography>
+                  <Typography variant="body1">
                     I am always excited to work on a project. I look to learn
                     something new and am happy to lead the way when needed.
-                  </p>
+                  </Typography>
                 </>
               )}
             </Paper>
@@ -84,10 +88,12 @@ function About() {
             onMouseLeave={() => setIsHovered3(false)}
           >
             <Paper style={styles.bottomPaper}>
-              <h2 style={titleStyle3}>As a Colleague</h2>
+              <Typography variant="h4" style={titleStyle3}>
+                As a Colleague
+              </Typography>
               {isHovered3 && (
                 <>
-                  <p>
+                  <Typography variant="body1">
                     Communication is key. With my background in sales I have
                     learned to communicate with{" "}
                     <b>
@@ -95,14 +101,14 @@ function About() {
                     </b>{" "}
                     type of person. I am always happy to voice my opinion or
                     welcome others' as well.
-                  </p>
-                  <p>
+                  </Typography>
+                  <Typography variant="body1">
                     I am a team player and happy to help my peers when needed. I
                     prefer to go into what I call code mode (blast music for a
                     couple hours and vigorously type away) but when needed,
                     jumping on a call to break down a complicated problem can be
                     just as fun.
-                  </p>
+                  </Typography>
                 </>
               )}
             </Paper>
@@ -115,18 +121,20 @@ function About() {
             onMouseLeave={() => setIsHovered4(false)}
           >
             <Paper style={styles.bottomPaper}>
-              <h2 style={titleStyle4}>As a Person</h2>
+              <Typography variant="h4" style={titleStyle4}>
+                As a Person
+              </Typography>
               {isHovered4 && (
                 <>
-                  <p>
+                  <Typography variant="body1">
                     Work life balance is very important to me. I gravitated to
                     this career because of just that.
-                  </p>
-                  <p>
+                  </Typography>
+                  <Typography variant="body1">
                     I make sure to take time for my family and myself. I love
                     spending time with my kids, whether we are hiking, playing
                     games or cozied up to a movie.
-                  </p>
+                  </Typography>
                 </>
               )}
             </Paper>
@@ -134,7 +142,7 @@ function About() {
         </Grid>
       </Box>
       <DownArrowButton page="/skills" direction="down" />
-    </div>
+    </Box>
   );
 }
 

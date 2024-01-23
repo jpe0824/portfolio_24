@@ -1,3 +1,5 @@
+///TODO -- add tooltips to skills that dynamically show years of experience, and any other useful info
+
 import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
 import styles from "../../styles/styles";
 import { Box, Grid, Paper, Typography } from "@mui/material";
@@ -5,6 +7,7 @@ import DynamicIcon from "../../components/Icons";
 
 function Skills() {
   const skills = [
+    { iconName: "FaPython", title: "Python", color: "#4B8BBE" },
     { iconName: "BiLogoTypescript", title: "TS | JS", color: "#4671BB" },
     { iconName: "PiBracketsCurlyBold", title: "C++", color: "#275293" },
     { iconName: "FaRust", title: "Rust", color: "#E05416" },
@@ -19,6 +22,7 @@ function Skills() {
     },
     { iconName: "GrMysql", title: "SQL", color: "#00758F" },
     { iconName: "FaDatabase", title: "DB Management", color: "#426084" },
+    { iconName: "PiCursorClickFill", title: "UI/UX", color: "#F7DF1E" },
     { iconName: "AiOutlineRobot", title: "AI Tools", color: "#439C7E" },
     { iconName: "FaGitAlt", title: "Version Control", color: "#D95836" },
     { iconName: "FaDocker", title: "Docker", color: "#0DB7ED" },
@@ -28,26 +32,21 @@ function Skills() {
   ];
 
   return (
-    <div style={styles.bodyContainer}>
+    <Box style={styles.bodyContainer}>
       <UpArrowButton page="/about" direction="up" />
-      <h1 style={styles.title}>Skills</h1>
+      <Typography variant="h2" style={styles.title}>
+        Skills
+      </Typography>
       <Box sx={styles.pageContainer}>
         <Paper>
           <Grid container spacing={2}>
             {skills.map((skill, index) => (
               <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
-                <Box sx={styles.pageContainer}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <Typography variant="h3" color={skill.color}>
-                      <DynamicIcon name={skill.iconName} />
-                    </Typography>
-                    <Typography variant="body1">{skill.title}</Typography>
-                  </Box>
+                <Box sx={styles.iconContainer}>
+                  <Typography variant="h3" color={skill.color}>
+                    <DynamicIcon name={skill.iconName} />
+                  </Typography>
+                  <Typography variant="body1">{skill.title}</Typography>
                 </Box>
               </Grid>
             ))}
@@ -55,7 +54,7 @@ function Skills() {
         </Paper>
       </Box>
       <DownArrowButton page="/portfolio" direction="down" />
-    </div>
+    </Box>
   );
 }
 

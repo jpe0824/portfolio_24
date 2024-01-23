@@ -93,7 +93,7 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <Box className="header">
       <IconButton
         sx={{
           position: "absolute",
@@ -115,7 +115,7 @@ function Header() {
       <Drawer anchor="right" open={state.open} onClose={toggleDrawer(false)}>
         {list()}
       </Drawer>
-    </div>
+    </Box>
   );
 }
 

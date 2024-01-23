@@ -3,6 +3,7 @@ import "./Landing.css";
 import { styled } from "@mui/system";
 // import { Link } from "react-scroll";
 import { DownArrowButton } from "../../components/Buttons";
+import { Box, Typography } from "@mui/material";
 
 const StyledName = styled("span")(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -10,13 +11,13 @@ const StyledName = styled("span")(({ theme }) => ({
 
 function Landing() {
   return (
-    <div className="title-container">
-      <h1 className="name">
-        <div>
+    <Box className="title-container">
+      <Typography variant="h2" className="name">
+        <Box>
           Hi! I'm <StyledName>Jason</StyledName>,
-        </div>
-        <div>Software Engineer,</div>
-        <div className="container-flip">
+        </Box>
+        <Box>Software Engineer,</Box>
+        <Box className="container-flip">
           <span className="flip">Husband & Father</span>
           <span className="flip">Student</span>
           <span className="flip">Lego Builder</span>
@@ -25,10 +26,10 @@ function Landing() {
           <span className="flip">Tinkerer</span>
           <span className="flip">Tech Enthusiast</span>
           <span className="flip">Dodgers Fan</span>
-        </div>
-      </h1>
+        </Box>
+      </Typography>
       <DownArrowButton page="about" direction="down" />
-    </div>
+    </Box>
   );
 }
 

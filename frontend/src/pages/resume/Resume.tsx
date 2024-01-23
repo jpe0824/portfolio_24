@@ -1,13 +1,16 @@
+import { Box, Typography } from "@mui/material";
 import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
 import styles from "../../styles/styles";
 
 function Resume() {
   return (
-    <div>
+    <Box>
       <UpArrowButton page="/contact" direction="up" />
-      <h1 style={styles.title}>Resume</h1>
+      <Typography variant="h2" style={styles.title}>
+        Resume
+      </Typography>
       <DownArrowButton page="/" direction="down" />
-    </div>
+    </Box>
   );
 }
 

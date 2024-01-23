@@ -1,5 +1,3 @@
-///TODO -- add tooltips to skills that dynamically show years of experience, and any other useful info
-
 import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
 import styles from "../../styles/styles";
 import { Box, Grid, Paper, Typography } from "@mui/material";
@@ -11,7 +9,7 @@ function Skills() {
       iconName: "FaPython",
       title: "Python",
       color: "#4B8BBE",
-      date: "2021/06/01",
+      date: "2021/01/01",
     },
     {
       iconName: "FaGitAlt",

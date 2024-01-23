@@ -29,7 +29,13 @@ const styles = {
     marginRight: "5vw", // Centers the Box itself
     marginTop: "5vh", // Centers the Box itself
     marginBottom: "5vh", // Centers the Box itself
-    width: "90%", // Adjust as needed
+    width: "auto", // Adjust as needed
+  },
+  bodyContainer: {
+    flexGrow: 1,
+    height: "90vh",
+    width: "100vw",
+    overflow: "auto",
   },
 };
 

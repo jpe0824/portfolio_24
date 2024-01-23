@@ -1,7 +1,4 @@
-import {
-  DownArrowButton,
-  UpArrowButton,
-} from "../../components/buttons/Buttons";
+import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
 import { Box, Grid, Paper } from "@mui/material";
 import styles from "../../styles/styles";
 import { useState } from "react";
@@ -18,9 +15,7 @@ function About() {
   const titleStyle4 = isHovered4 ? { marginBottom: 0 } : {};
 
   return (
-    <div
-      style={{ flexGrow: 1, height: "90vh", width: "100vw", overflow: "auto" }}
-    >
+    <div style={styles.bodyContainer}>
       <UpArrowButton page="/" direction="up" />
       <h1 style={styles.title}>About</h1>
       <Box sx={styles.pageContainer}>

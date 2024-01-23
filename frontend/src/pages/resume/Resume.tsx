@@ -1,8 +1,4 @@
-import "./Resume.css";
-import {
-  DownArrowButton,
-  UpArrowButton,
-} from "../../components/buttons/Buttons";
+import { DownArrowButton, UpArrowButton } from "../../components/Buttons";
 import styles from "../../styles/styles";
 
 function Resume() {

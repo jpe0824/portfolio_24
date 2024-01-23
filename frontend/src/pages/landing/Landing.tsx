@@ -2,7 +2,7 @@ import React from "react";
 import "./Landing.css";
 import { styled } from "@mui/system";
 // import { Link } from "react-scroll";
-import { DownArrowButton } from "../../components/buttons/Buttons"
+import { DownArrowButton } from "../../components/Buttons";
 
 const StyledName = styled("span")(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -11,7 +11,6 @@ const StyledName = styled("span")(({ theme }) => ({
 function Landing() {
   return (
     <div className="title-container">
-
       <h1 className="name">
         <div>
           Hi! I'm <StyledName>Jason</StyledName>,
